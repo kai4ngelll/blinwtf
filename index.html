@@ -14,14 +14,14 @@
     --bg-deep:      #130a1b;
     --bg-panel:     #1c0f24;
     --bg-panel-2:   #241328;
-    --pink:         #ff4fa0;
-    --pink-hot:     #ff7ab8;
-    --pink-soft:    #ffb8de;
-    --pink-dim:     #a3406f;
-    --lav:          #cba3e0;
-    --text-main:    #f6e8f2;
-    --text-muted:   #c7a3c0;
-    --text-dim:     #8a6c85;
+    --pink:         #c23e73;
+    --pink-hot:     #d1568a;
+    --pink-soft:    #cf93ab;
+    --pink-dim:     #6e3350;
+    --lav:          #8d76a3;
+    --text-main:    #ead4e0;
+    --text-muted:   #ab8ba0;
+    --text-dim:     #705d6c;
     --line:         rgba(255,255,255,0.08);
   }
 
@@ -48,15 +48,15 @@
   .bg-glow{
     position:fixed; inset:0; z-index:0; pointer-events:none;
     background:
-      radial-gradient(60% 45% at 22% 15%, rgba(255,79,160,0.20), transparent 60%),
-      radial-gradient(55% 40% at 82% 78%, rgba(203,163,224,0.14), transparent 65%),
-      radial-gradient(80% 60% at 50% 100%, rgba(255,79,160,0.10), transparent 70%),
+      radial-gradient(60% 45% at 22% 15%, rgba(194,62,115,0.13), transparent 60%),
+      radial-gradient(55% 40% at 82% 78%, rgba(141,118,163,0.09), transparent 65%),
+      radial-gradient(80% 60% at 50% 100%, rgba(194,62,115,0.07), transparent 70%),
       var(--bg-void);
     animation: breathe 9s ease-in-out infinite;
   }
   @keyframes breathe{
     0%,100%{ filter:brightness(1) saturate(1); }
-    50%{ filter:brightness(1.12) saturate(1.15); }
+    50%{ filter:brightness(1.06) saturate(1.06); }
   }
 
   .grain{
@@ -100,14 +100,14 @@
     position:absolute;
     width:340px; height:340px;
     border-radius:50%;
-    background:radial-gradient(circle, rgba(255,79,160,0.35), rgba(255,79,160,0) 70%);
+    background:radial-gradient(circle, rgba(194,62,115,0.20), rgba(194,62,115,0) 70%);
     filter:blur(10px);
     animation: pulse-orb 4.5s ease-in-out infinite;
     z-index:-1;
   }
   @keyframes pulse-orb{
-    0%,100%{ transform:scale(1); opacity:0.75; }
-    50%{ transform:scale(1.18); opacity:1; }
+    0%,100%{ transform:scale(1); opacity:0.6; }
+    50%{ transform:scale(1.18); opacity:0.85; }
   }
 
   .hero-eyebrow{
@@ -139,22 +139,22 @@
     font-weight:700;
     font-size:16px;
     letter-spacing:0.02em;
-    color:#1a0a16;
-    background:linear-gradient(135deg, var(--pink-hot), var(--pink));
+    color:#f3e6ee;
+    background:linear-gradient(135deg, var(--pink-hot), var(--pink-dim));
     border:none;
     border-radius:999px;
     padding:19px 46px;
     cursor:pointer;
     box-shadow:
-      0 8px 30px rgba(255,79,160,0.45),
-      0 0 0 1px rgba(255,255,255,0.15) inset;
+      0 8px 24px rgba(194,62,115,0.28),
+      0 0 0 1px rgba(255,255,255,0.08) inset;
     animation: heartbeat 2.6s ease-in-out infinite;
     transition: transform 0.15s ease, box-shadow 0.3s ease;
     -webkit-appearance:none;
   }
   .btn-main:active{
     transform:scale(0.94);
-    box-shadow:0 4px 16px rgba(255,79,160,0.4), 0 0 0 1px rgba(255,255,255,0.15) inset;
+    box-shadow:0 4px 14px rgba(194,62,115,0.25), 0 0 0 1px rgba(255,255,255,0.08) inset;
   }
   @keyframes heartbeat{
     0%,100%{ transform:scale(1); }
@@ -231,7 +231,7 @@
   .dot.active{
     background:var(--pink-soft);
     width:16px; border-radius:3px;
-    box-shadow:0 0 8px rgba(255,184,222,0.8);
+    box-shadow:0 0 6px rgba(207,147,171,0.5);
   }
 
   .story-caption{
@@ -241,7 +241,7 @@
     font-size:clamp(30px, 8vw, 40px);
     color:var(--pink-soft);
     margin:28px 20px 6px;
-    text-shadow:0 0 20px rgba(255,79,160,0.25);
+    text-shadow:0 0 16px rgba(194,62,115,0.15);
   }
 
   .story-sub{
@@ -302,10 +302,10 @@
     pointer-events:none;
   }
   .frame-corner{
-    position:absolute; width:9px; height:9px;
+    position:absolute; width:8px; height:8px;
     border-radius:50%;
     background:var(--pink);
-    box-shadow:0 0 8px rgba(255,79,160,0.7);
+    box-shadow:0 0 6px rgba(194,62,115,0.4);
   }
   .frame-corner.tl{ top:6px; left:6px; }
   .frame-corner.br{ bottom:6px; right:6px; }
@@ -325,8 +325,8 @@
     margin:10px 22px 0;
     padding:30px 22px;
     border-radius:22px;
-    background:linear-gradient(160deg, rgba(255,79,160,0.14), rgba(203,163,224,0.06));
-    border:1px solid rgba(255,79,160,0.18);
+    background:linear-gradient(160deg, rgba(194,62,115,0.10), rgba(141,118,163,0.05));
+    border:1px solid rgba(194,62,115,0.14);
     text-align:center;
     position:relative;
     overflow:hidden;
@@ -352,7 +352,7 @@
   }
   .hug-heart svg{
     width:100%; height:100%;
-    filter:drop-shadow(0 6px 18px rgba(255,79,160,0.5));
+    filter:drop-shadow(0 6px 14px rgba(194,62,115,0.35));
     transition: transform 0.18s cubic-bezier(.34,1.56,.64,1);
   }
   .hug-heart.pop svg{ transform:scale(1.35); }
@@ -363,6 +363,106 @@
     color:var(--pink-soft);
     letter-spacing:0.01em;
     min-height:20px;
+  }
+
+  /* --- letter --- */
+  .letter-block{
+    margin:22px 22px 0;
+    display:flex;
+    justify-content:center;
+  }
+  .letter-btn{
+    font-family:'Manrope', sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    color:var(--text-main);
+    background:rgba(194,62,115,0.14);
+    border:1px solid rgba(194,62,115,0.35);
+    border-radius:999px;
+    padding:15px 26px;
+    cursor:pointer;
+    -webkit-appearance:none;
+    letter-spacing:0.01em;
+    transition: transform 0.15s ease, background 0.25s ease;
+  }
+  .letter-btn:active{
+    transform:scale(0.96);
+    background:rgba(194,62,115,0.24);
+  }
+
+  .letter-overlay{
+    position:fixed; inset:0; z-index:50;
+    display:flex; align-items:center; justify-content:center;
+    padding:26px;
+    background:rgba(8,4,12,0);
+    backdrop-filter:blur(0px);
+    pointer-events:none;
+    transition: background 0.45s ease, backdrop-filter 0.45s ease;
+  }
+  .letter-overlay.open{
+    background:rgba(8,4,12,0.72);
+    backdrop-filter:blur(6px);
+    pointer-events:auto;
+  }
+
+  .letter-paper{
+    position:relative;
+    width:100%;
+    max-width:420px;
+    max-height:78vh;
+    overflow-y:auto;
+    background:#f4ecdf;
+    color:#3c2f36;
+    border-radius:6px;
+    padding:40px 26px 34px;
+    box-shadow:0 30px 70px rgba(0,0,0,0.55);
+    transform:scale(0.82) rotate(-3deg);
+    opacity:0;
+    transition: transform 0.5s cubic-bezier(.22,1.1,.36,1), opacity 0.4s ease;
+  }
+  .letter-overlay.open .letter-paper{
+    transform:scale(1) rotate(0deg);
+    opacity:1;
+  }
+
+  .letter-tape{
+    position:absolute;
+    top:-14px; left:50%;
+    transform:translateX(-50%) rotate(-2deg);
+    width:74px; height:26px;
+    background:rgba(194,62,115,0.35);
+    border:1px solid rgba(194,62,115,0.2);
+  }
+
+  .letter-close{
+    position:absolute; top:10px; right:12px;
+    width:30px; height:30px;
+    border-radius:50%;
+    border:none;
+    background:rgba(60,47,54,0.08);
+    color:#3c2f36;
+    font-size:19px;
+    line-height:1;
+    cursor:pointer;
+    -webkit-appearance:none;
+  }
+
+  .letter-text{
+    font-family:'Manrope', sans-serif;
+    font-size:14.5px;
+    line-height:1.65;
+    color:#3c2f36;
+  }
+  .letter-text p{
+    margin-bottom:18px;
+  }
+  .letter-text p:last-child{
+    margin-bottom:0;
+  }
+  .letter-sign{
+    text-align:right;
+    font-weight:600;
+    color:#7a3355;
   }
 
   .story-bottom-space{ height:56px; }
@@ -390,10 +490,8 @@
   <!-- ================= SCREEN 1 ================= -->
   <section class="hero" id="hero">
     <div class="hero-orb"></div>
-    <span class="hero-eyebrow">на всякий случай</span>
     <h1 class="hero-title">если скучаешь<br>нажми на <span class="accent">эту кнопку</span></h1>
     <button class="btn-main" id="openBtn">тупо мы</button>
-    <span class="hero-hint">(это точно того стоит)</span>
   </section>
 
   <!-- ================= SCREEN 2 ================= -->
@@ -409,7 +507,6 @@
     </div>
 
     <p class="story-caption">вот такие мы балбесики :</p>
-    <p class="story-sub">листай дальше ↓</p>
 
     <div class="divider">
       <svg viewBox="0 0 24 24" fill="var(--pink)"><path d="M12 21s-6.7-4.3-9.6-8.1C.6 10.6 1 7.2 3.6 5.5c2.2-1.4 5-.9 6.6 1 .6.7 1.1 1.5 1.8 1.5s1.2-.8 1.8-1.5c1.6-1.9 4.4-2.4 6.6-1 2.6 1.7 3 5.1 1.2 7.4C18.7 16.7 12 21 12 21z"/></svg>
@@ -420,14 +517,12 @@
     </div>
 
     <div class="hug-block fade-in">
-      <p class="hug-title">маленький ритуал</p>
-      <p class="hug-desc">жми, пока не надоест</p>
       <button class="hug-heart" id="hugHeart">
         <svg viewBox="0 0 24 24" fill="url(#g)">
           <defs>
             <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#ff7ab8"/>
-              <stop offset="100%" stop-color="#ff4fa0"/>
+              <stop offset="0%" stop-color="#d1568a"/>
+              <stop offset="100%" stop-color="#c23e73"/>
             </linearGradient>
           </defs>
           <path d="M12 21s-6.7-4.3-9.6-8.1C.6 10.6 1 7.2 3.6 5.5c2.2-1.4 5-.9 6.6 1 .6.7 1.1 1.5 1.8 1.5s1.2-.8 1.8-1.5c1.6-1.9 4.4-2.4 6.6-1 2.6 1.7 3 5.1 1.2 7.4C18.7 16.7 12 21 12 21z"/>
@@ -436,8 +531,24 @@
       <p class="hug-count" id="hugCount"></p>
     </div>
 
+    <div class="letter-block fade-in">
+      <button class="letter-btn" id="letterBtn">нажми если очень сильно соскучилась</button>
+    </div>
+
     <div class="story-bottom-space"></div>
   </main>
+
+  <div class="letter-overlay" id="letterOverlay">
+    <div class="letter-paper" id="letterPaper">
+      <button class="letter-close" id="letterClose" aria-label="закрыть">×</button>
+      <div class="letter-tape"></div>
+      <div class="letter-text">
+        <p>если ты это читаешь то я очень надеюсь что тебе понравилась моя идея создать такой сайт и собрать наши недавние фото именно вот здесь</p>
+        <p>я за тобой соскучился и очень сильно тебя люблю, надеюсь мы скоро встретимся и классно проведем время , в последние дни ты постоянно говоришь мне, что тебе очень комфортно со мной , что тебе нравится проводить время со мной, что гуляя со мной ты можешь вести себя по обычному, можешь говорить мне буквально все, я это очень ценню, я рад что ты есть в моей жизни, я тебе также за все это благодарен, ведь без тебя мне было бы хуже, ты самый лучший человек в моей жизни, люблю тебя</p>
+        <p class="letter-sign">твой вовчек....🥺</p>
+      </div>
+    </div>
+  </div>
 
 <script>
   // Telegram Mini App init
@@ -599,9 +710,30 @@
     fh.textContent = '♥';
     fh.style.left = (rect.left + rect.width/2 + (Math.random()*30-15)) + 'px';
     fh.style.top = (rect.top) + 'px';
-    fh.style.color = ['#ff4fa0','#ff7ab8','#ffb8de','#cba3e0'][Math.floor(Math.random()*4)];
+    fh.style.color = ['#c23e73','#d1568a','#cf93ab','#8d76a3'][Math.floor(Math.random()*4)];
     document.body.appendChild(fh);
     setTimeout(()=> fh.remove(), 1700);
+  });
+
+  // ---------- letter ----------
+  const letterBtn = document.getElementById('letterBtn');
+  const letterOverlay = document.getElementById('letterOverlay');
+  const letterClose = document.getElementById('letterClose');
+
+  function openLetter(){
+    letterOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    haptic('medium');
+  }
+  function closeLetter(){
+    letterOverlay.classList.remove('open');
+    document.body.style.overflow = 'auto';
+  }
+
+  letterBtn.addEventListener('click', openLetter);
+  letterClose.addEventListener('click', closeLetter);
+  letterOverlay.addEventListener('click', (e) => {
+    if (e.target === letterOverlay) closeLetter();
   });
 </script>
 </body>
