@@ -379,23 +379,64 @@
     display:flex;
     justify-content:center;
   }
-  .letter-btn{
-    font-family:'Manrope', sans-serif;
-    font-weight:600;
-    font-size:13.5px;
-    color:var(--text-main);
-    background:rgba(194,62,115,0.14);
-    border:1px solid rgba(194,62,115,0.35);
-    border-radius:999px;
-    padding:15px 26px;
+  .envelope-btn{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    background:none;
+    border:none;
     cursor:pointer;
     -webkit-appearance:none;
-    letter-spacing:0.01em;
-    transition: transform 0.15s ease, background 0.25s ease;
+    padding:10px;
   }
-  .letter-btn:active{
-    transform:scale(0.96);
-    background:rgba(194,62,115,0.24);
+  .envelope{
+    position:relative;
+    width:112px;
+    height:76px;
+    background:linear-gradient(160deg, #3a2130, #2a1622);
+    border:1px solid rgba(194,62,115,0.35);
+    border-radius:7px;
+    box-shadow:0 14px 30px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    animation: env-float 3.4s ease-in-out infinite;
+  }
+  .envelope-btn:active .envelope{
+    transform:scale(0.94);
+  }
+  @keyframes env-float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-4px); }
+  }
+  .envelope-flap{
+    position:absolute;
+    top:0; left:0;
+    width:0; height:0;
+    border-left:56px solid transparent;
+    border-right:56px solid transparent;
+    border-top:38px solid #4a2739;
+    filter:drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+  }
+  .envelope-seal{
+    position:absolute;
+    top:26px; left:50%;
+    transform:translateX(-50%);
+    width:22px; height:22px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--pink-hot), var(--pink-dim));
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px;
+    color:#f3e6ee;
+    box-shadow:0 3px 8px rgba(0,0,0,0.4);
+  }
+  .envelope-label{
+    font-family:'Manrope', sans-serif;
+    font-weight:600;
+    font-size:13px;
+    color:var(--text-muted);
+    text-align:center;
+    max-width:200px;
+    letter-spacing:0.01em;
   }
 
   .letter-overlay{
@@ -548,7 +589,13 @@
     </div>
 
     <div class="letter-block fade-in">
-      <button class="letter-btn" id="letterBtn">нажми если очень сильно соскучилась</button>
+      <button class="envelope-btn" id="letterBtn">
+        <span class="envelope">
+          <span class="envelope-flap"></span>
+          <span class="envelope-seal">♥</span>
+        </span>
+        <span class="envelope-label">нажми если очень сильно соскучилась</span>
+      </button>
     </div>
 
     <div class="story-bottom-space"></div>
